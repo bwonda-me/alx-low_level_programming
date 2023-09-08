@@ -1,10 +1,15 @@
 #include <stdlib.h>
-#include <time.h>
-/**
-* main - A program that prints a positive or a negative code
-* Return: 0 (success)
-*/
 
+#include <time.h>
+
+#include <stdio.h>
+
+
+/**
+* main - Prints if number is positive, zero or negative
+* Return: Always (success)
+*
+*/
 
 int main(void)
 {
@@ -13,12 +18,17 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 
-	printf("%d \n");
 	if (n > 0)
-	printf("The number is positive \n");
+	{
+	printf("%d is positive\n", n);
+	}
+	else if (n == 0)
+	{
+	printf("%d is zero\n", n);
+	}
 	else if (n < 0)
-	printf("The number is negative \n");
-	else
-	printf("The number is zero \n");
+	{
+	printf("%d is negative\n", n);
+	}
 	return (0);
 }
